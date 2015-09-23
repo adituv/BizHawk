@@ -36,7 +36,6 @@
 			this.lblUserFilterName = new System.Windows.Forms.Label();
 			this.btnSelectUserFilter = new System.Windows.Forms.Button();
 			this.rbUser = new System.Windows.Forms.RadioButton();
-			this.tbScanlineIntensity = new BizHawk.Client.EmuHawk.TransparentTrackBar();
 			this.rbNone = new System.Windows.Forms.RadioButton();
 			this.rbScanlines = new System.Windows.Forms.RadioButton();
 			this.rbHq2x = new System.Windows.Forms.RadioButton();
@@ -88,11 +87,11 @@
 			this.cbStatusBarWindowed = new System.Windows.Forms.CheckBox();
 			this.label9 = new System.Windows.Forms.Label();
 			this.cbMenuWindowed = new System.Windows.Forms.CheckBox();
-			this.trackbarFrameSizeWindowed = new BizHawk.Client.EmuHawk.TransparentTrackBar();
 			this.cbCaptionWindowed = new System.Windows.Forms.CheckBox();
 			this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+			this.tbScanlineIntensity = new BizHawk.Client.EmuHawk.TransparentTrackBar();
+			this.trackbarFrameSizeWindowed = new BizHawk.Client.EmuHawk.TransparentTrackBar();
 			this.groupBox1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.tbScanlineIntensity)).BeginInit();
 			this.grpFinalFilter.SuspendLayout();
 			this.grpARSelection.SuspendLayout();
 			this.tabControl1.SuspendLayout();
@@ -105,6 +104,7 @@
 			this.tabPage1.SuspendLayout();
 			this.groupBox4.SuspendLayout();
 			this.groupBox2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.tbScanlineIntensity)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.trackbarFrameSizeWindowed)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -115,7 +115,7 @@
 			this.btnCancel.Location = new System.Drawing.Point(360, 404);
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.Size = new System.Drawing.Size(75, 23);
-			this.btnCancel.TabIndex = 5;
+			this.btnCancel.TabIndex = 2;
 			this.btnCancel.Text = "Cancel";
 			this.btnCancel.UseVisualStyleBackColor = true;
 			// 
@@ -125,7 +125,7 @@
 			this.btnOk.Location = new System.Drawing.Point(279, 404);
 			this.btnOk.Name = "btnOk";
 			this.btnOk.Size = new System.Drawing.Size(75, 23);
-			this.btnOk.TabIndex = 4;
+			this.btnOk.TabIndex = 1;
 			this.btnOk.Text = "OK";
 			this.btnOk.UseVisualStyleBackColor = true;
 			this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
@@ -143,7 +143,7 @@
 			this.groupBox1.Location = new System.Drawing.Point(6, 6);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(193, 132);
-			this.groupBox1.TabIndex = 7;
+			this.groupBox1.TabIndex = 0;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Scaling Filter";
 			// 
@@ -154,7 +154,7 @@
 			this.lblScanlines.Location = new System.Drawing.Point(104, 39);
 			this.lblScanlines.Name = "lblScanlines";
 			this.lblScanlines.Size = new System.Drawing.Size(15, 13);
-			this.lblScanlines.TabIndex = 11;
+			this.lblScanlines.TabIndex = 4;
 			this.lblScanlines.Text = "%";
 			// 
 			// lblUserFilterName
@@ -162,7 +162,7 @@
 			this.lblUserFilterName.Location = new System.Drawing.Point(6, 114);
 			this.lblUserFilterName.Name = "lblUserFilterName";
 			this.lblUserFilterName.Size = new System.Drawing.Size(161, 15);
-			this.lblUserFilterName.TabIndex = 10;
+			this.lblUserFilterName.TabIndex = 7;
 			this.lblUserFilterName.Text = "Will contain user filter name";
 			// 
 			// btnSelectUserFilter
@@ -170,7 +170,7 @@
 			this.btnSelectUserFilter.Location = new System.Drawing.Point(83, 88);
 			this.btnSelectUserFilter.Name = "btnSelectUserFilter";
 			this.btnSelectUserFilter.Size = new System.Drawing.Size(75, 23);
-			this.btnSelectUserFilter.TabIndex = 5;
+			this.btnSelectUserFilter.TabIndex = 6;
 			this.btnSelectUserFilter.Text = "Select";
 			this.btnSelectUserFilter.UseVisualStyleBackColor = true;
 			this.btnSelectUserFilter.Click += new System.EventHandler(this.btnSelectUserFilter_Click);
@@ -181,23 +181,10 @@
 			this.rbUser.Location = new System.Drawing.Point(6, 88);
 			this.rbUser.Name = "rbUser";
 			this.rbUser.Size = new System.Drawing.Size(47, 17);
-			this.rbUser.TabIndex = 4;
+			this.rbUser.TabIndex = 3;
 			this.rbUser.TabStop = true;
 			this.rbUser.Text = "User";
 			this.rbUser.UseVisualStyleBackColor = true;
-			// 
-			// tbScanlineIntensity
-			// 
-			this.tbScanlineIntensity.LargeChange = 32;
-			this.tbScanlineIntensity.Location = new System.Drawing.Point(83, 55);
-			this.tbScanlineIntensity.Maximum = 256;
-			this.tbScanlineIntensity.Name = "tbScanlineIntensity";
-			this.tbScanlineIntensity.Size = new System.Drawing.Size(70, 42);
-			this.tbScanlineIntensity.TabIndex = 3;
-			this.tbScanlineIntensity.TickFrequency = 32;
-			this.tbScanlineIntensity.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-			this.tbScanlineIntensity.Scroll += new System.EventHandler(this.tbScanlineIntensity_Scroll);
-			this.tbScanlineIntensity.ValueChanged += new System.EventHandler(this.tbScanlineIntensity_Scroll);
 			// 
 			// rbNone
 			// 
@@ -205,7 +192,7 @@
 			this.rbNone.Location = new System.Drawing.Point(6, 19);
 			this.rbNone.Name = "rbNone";
 			this.rbNone.Size = new System.Drawing.Size(51, 17);
-			this.rbNone.TabIndex = 2;
+			this.rbNone.TabIndex = 0;
 			this.rbNone.TabStop = true;
 			this.rbNone.Text = "None";
 			this.rbNone.UseVisualStyleBackColor = true;
@@ -216,7 +203,7 @@
 			this.rbScanlines.Location = new System.Drawing.Point(6, 65);
 			this.rbScanlines.Name = "rbScanlines";
 			this.rbScanlines.Size = new System.Drawing.Size(71, 17);
-			this.rbScanlines.TabIndex = 1;
+			this.rbScanlines.TabIndex = 2;
 			this.rbScanlines.TabStop = true;
 			this.rbScanlines.Text = "Scanlines";
 			this.rbScanlines.UseVisualStyleBackColor = true;
@@ -227,7 +214,7 @@
 			this.rbHq2x.Location = new System.Drawing.Point(6, 42);
 			this.rbHq2x.Name = "rbHq2x";
 			this.rbHq2x.Size = new System.Drawing.Size(50, 17);
-			this.rbHq2x.TabIndex = 0;
+			this.rbHq2x.TabIndex = 1;
 			this.rbHq2x.TabStop = true;
 			this.rbHq2x.Text = "Hq2x";
 			this.rbHq2x.UseVisualStyleBackColor = true;
@@ -238,7 +225,7 @@
 			this.checkLetterbox.Location = new System.Drawing.Point(6, 148);
 			this.checkLetterbox.Name = "checkLetterbox";
 			this.checkLetterbox.Size = new System.Drawing.Size(173, 17);
-			this.checkLetterbox.TabIndex = 8;
+			this.checkLetterbox.TabIndex = 5;
 			this.checkLetterbox.Text = "Maintain aspect ratio (letterbox)";
 			this.checkLetterbox.UseVisualStyleBackColor = true;
 			this.checkLetterbox.CheckedChanged += new System.EventHandler(this.checkLetterbox_CheckedChanged);
@@ -249,7 +236,7 @@
 			this.checkPadInteger.Location = new System.Drawing.Point(15, 284);
 			this.checkPadInteger.Name = "checkPadInteger";
 			this.checkPadInteger.Size = new System.Drawing.Size(248, 17);
-			this.checkPadInteger.TabIndex = 9;
+			this.checkPadInteger.TabIndex = 7;
 			this.checkPadInteger.Text = "Stretch pixels by integers only (e.g. no 1.3333x)";
 			this.checkPadInteger.UseVisualStyleBackColor = true;
 			this.checkPadInteger.CheckedChanged += new System.EventHandler(this.checkPadInteger_CheckedChanged);
@@ -262,7 +249,7 @@
 			this.grpFinalFilter.Location = new System.Drawing.Point(205, 6);
 			this.grpFinalFilter.Name = "grpFinalFilter";
 			this.grpFinalFilter.Size = new System.Drawing.Size(187, 97);
-			this.grpFinalFilter.TabIndex = 8;
+			this.grpFinalFilter.TabIndex = 1;
 			this.grpFinalFilter.TabStop = false;
 			this.grpFinalFilter.Text = "Final Filter";
 			// 
@@ -272,7 +259,7 @@
 			this.rbFinalFilterBicubic.Location = new System.Drawing.Point(7, 65);
 			this.rbFinalFilterBicubic.Name = "rbFinalFilterBicubic";
 			this.rbFinalFilterBicubic.Size = new System.Drawing.Size(142, 17);
-			this.rbFinalFilterBicubic.TabIndex = 3;
+			this.rbFinalFilterBicubic.TabIndex = 2;
 			this.rbFinalFilterBicubic.TabStop = true;
 			this.rbFinalFilterBicubic.Text = "Bicubic (shader. buggy?)";
 			this.rbFinalFilterBicubic.UseVisualStyleBackColor = true;
@@ -283,7 +270,7 @@
 			this.rbFinalFilterNone.Location = new System.Drawing.Point(6, 19);
 			this.rbFinalFilterNone.Name = "rbFinalFilterNone";
 			this.rbFinalFilterNone.Size = new System.Drawing.Size(51, 17);
-			this.rbFinalFilterNone.TabIndex = 2;
+			this.rbFinalFilterNone.TabIndex = 0;
 			this.rbFinalFilterNone.TabStop = true;
 			this.rbFinalFilterNone.Text = "None";
 			this.rbFinalFilterNone.UseVisualStyleBackColor = true;
@@ -294,7 +281,7 @@
 			this.rbFinalFilterBilinear.Location = new System.Drawing.Point(6, 42);
 			this.rbFinalFilterBilinear.Name = "rbFinalFilterBilinear";
 			this.rbFinalFilterBilinear.Size = new System.Drawing.Size(59, 17);
-			this.rbFinalFilterBilinear.TabIndex = 0;
+			this.rbFinalFilterBilinear.TabIndex = 1;
 			this.rbFinalFilterBilinear.TabStop = true;
 			this.rbFinalFilterBilinear.Text = "Bilinear";
 			this.rbFinalFilterBilinear.UseVisualStyleBackColor = true;
@@ -305,7 +292,7 @@
 			this.rbUseRaw.Location = new System.Drawing.Point(6, 19);
 			this.rbUseRaw.Name = "rbUseRaw";
 			this.rbUseRaw.Size = new System.Drawing.Size(240, 17);
-			this.rbUseRaw.TabIndex = 11;
+			this.rbUseRaw.TabIndex = 0;
 			this.rbUseRaw.TabStop = true;
 			this.rbUseRaw.Text = "Use 1:1 pixel size (for crispness or debugging)";
 			this.rbUseRaw.UseVisualStyleBackColor = true;
@@ -317,7 +304,7 @@
 			this.rbUseSystem.Location = new System.Drawing.Point(26, 58);
 			this.rbUseSystem.Name = "rbUseSystem";
 			this.rbUseSystem.Size = new System.Drawing.Size(167, 17);
-			this.rbUseSystem.TabIndex = 12;
+			this.rbUseSystem.TabIndex = 2;
 			this.rbUseSystem.TabStop = true;
 			this.rbUseSystem.Text = "Use system\'s recommendation";
 			this.rbUseSystem.UseVisualStyleBackColor = true;
@@ -335,7 +322,7 @@
 			this.grpARSelection.Location = new System.Drawing.Point(15, 171);
 			this.grpARSelection.Name = "grpARSelection";
 			this.grpARSelection.Size = new System.Drawing.Size(377, 107);
-			this.grpARSelection.TabIndex = 13;
+			this.grpARSelection.TabIndex = 6;
 			this.grpARSelection.TabStop = false;
 			this.grpARSelection.Text = "Aspect Ratio Selection";
 			// 
@@ -345,7 +332,7 @@
 			this.label4.Location = new System.Drawing.Point(23, 41);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(257, 13);
-			this.label4.TabIndex = 12;
+			this.label4.TabIndex = 1;
 			this.label4.Text = "Allow pixel distortion (e.g. 2x1 pixels, for better AR fit):";
 			// 
 			// txtCustomARHeight
@@ -353,7 +340,7 @@
 			this.txtCustomARHeight.Location = new System.Drawing.Point(230, 79);
 			this.txtCustomARHeight.Name = "txtCustomARHeight";
 			this.txtCustomARHeight.Size = new System.Drawing.Size(72, 20);
-			this.txtCustomARHeight.TabIndex = 15;
+			this.txtCustomARHeight.TabIndex = 6;
 			// 
 			// label3
 			// 
@@ -361,7 +348,7 @@
 			this.label3.Location = new System.Drawing.Point(212, 84);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(12, 13);
-			this.label3.TabIndex = 12;
+			this.label3.TabIndex = 5;
 			this.label3.Text = "x";
 			// 
 			// txtCustomARWidth
@@ -369,7 +356,7 @@
 			this.txtCustomARWidth.Location = new System.Drawing.Point(134, 79);
 			this.txtCustomARWidth.Name = "txtCustomARWidth";
 			this.txtCustomARWidth.Size = new System.Drawing.Size(72, 20);
-			this.txtCustomARWidth.TabIndex = 14;
+			this.txtCustomARWidth.TabIndex = 4;
 			// 
 			// rbUseCustom
 			// 
@@ -377,7 +364,7 @@
 			this.rbUseCustom.Location = new System.Drawing.Point(26, 80);
 			this.rbUseCustom.Name = "rbUseCustom";
 			this.rbUseCustom.Size = new System.Drawing.Size(107, 17);
-			this.rbUseCustom.TabIndex = 13;
+			this.rbUseCustom.TabIndex = 3;
 			this.rbUseCustom.TabStop = true;
 			this.rbUseCustom.Text = "Use custom Size:";
 			this.rbUseCustom.UseVisualStyleBackColor = true;
@@ -387,7 +374,7 @@
 			this.label2.Location = new System.Drawing.Point(3, 125);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(398, 27);
-			this.label2.TabIndex = 17;
+			this.label2.TabIndex = 2;
 			this.label2.Text = "Some people think the white noise is a great idea, and some people don\'t. Disabli" +
     "ng this displays black instead.";
 			// 
@@ -397,7 +384,7 @@
 			this.checkSnowyNullEmulator.Location = new System.Drawing.Point(3, 105);
 			this.checkSnowyNullEmulator.Name = "checkSnowyNullEmulator";
 			this.checkSnowyNullEmulator.Size = new System.Drawing.Size(159, 17);
-			this.checkSnowyNullEmulator.TabIndex = 16;
+			this.checkSnowyNullEmulator.TabIndex = 1;
 			this.checkSnowyNullEmulator.Text = "Enable Snowy Null Emulator";
 			this.checkSnowyNullEmulator.UseVisualStyleBackColor = true;
 			// 
@@ -408,7 +395,7 @@
 			this.rbOpenGL.Location = new System.Drawing.Point(6, 80);
 			this.rbOpenGL.Name = "rbOpenGL";
 			this.rbOpenGL.Size = new System.Drawing.Size(65, 17);
-			this.rbOpenGL.TabIndex = 3;
+			this.rbOpenGL.TabIndex = 2;
 			this.rbOpenGL.TabStop = true;
 			this.rbOpenGL.Text = "OpenGL";
 			this.rbOpenGL.UseVisualStyleBackColor = true;
@@ -418,7 +405,7 @@
 			this.label5.Location = new System.Drawing.Point(21, 100);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(359, 47);
-			this.label5.TabIndex = 16;
+			this.label5.TabIndex = 3;
 			this.label5.Text = " • May malfunction on some systems.\r\n • May have increased performance for OpenGL" +
     "-based emulation cores.\r\n • May have reduced performance on some systems.\r\n";
 			// 
@@ -435,7 +422,7 @@
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
 			this.tabControl1.Size = new System.Drawing.Size(423, 382);
-			this.tabControl1.TabIndex = 17;
+			this.tabControl1.TabIndex = 0;
 			// 
 			// tpAR
 			// 
@@ -461,7 +448,7 @@
 			this.label11.Location = new System.Drawing.Point(307, 117);
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(14, 13);
-			this.label11.TabIndex = 16;
+			this.label11.TabIndex = 4;
 			this.label11.Text = "X";
 			// 
 			// label10
@@ -470,7 +457,7 @@
 			this.label10.Location = new System.Drawing.Point(208, 116);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(51, 13);
-			this.label10.TabIndex = 15;
+			this.label10.TabIndex = 2;
 			this.label10.Text = "Prescale:";
 			// 
 			// nudPrescale
@@ -488,7 +475,7 @@
             0});
 			this.nudPrescale.Name = "nudPrescale";
 			this.nudPrescale.Size = new System.Drawing.Size(45, 20);
-			this.nudPrescale.TabIndex = 14;
+			this.nudPrescale.TabIndex = 3;
 			this.nudPrescale.Value = new decimal(new int[] {
             1,
             0,
@@ -511,7 +498,7 @@
 			this.label6.Location = new System.Drawing.Point(3, 227);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(359, 47);
-			this.label6.TabIndex = 18;
+			this.label6.TabIndex = 1;
 			this.label6.Text = "Changes require restart of program to take effect.\r\n";
 			// 
 			// groupBox3
@@ -525,7 +512,7 @@
 			this.groupBox3.Location = new System.Drawing.Point(4, 3);
 			this.groupBox3.Name = "groupBox3";
 			this.groupBox3.Size = new System.Drawing.Size(389, 221);
-			this.groupBox3.TabIndex = 16;
+			this.groupBox3.TabIndex = 0;
 			this.groupBox3.TabStop = false;
 			// 
 			// label8
@@ -533,7 +520,7 @@
 			this.label8.Location = new System.Drawing.Point(21, 30);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(359, 47);
-			this.label8.TabIndex = 20;
+			this.label8.TabIndex = 1;
 			this.label8.Text = " • Best compatibility\r\n • May have trouble with OpenGL-based cores (Saturn,N64)\r\n" +
     "";
 			// 
@@ -544,7 +531,7 @@
 			this.rbD3D9.Location = new System.Drawing.Point(6, 10);
 			this.rbD3D9.Name = "rbD3D9";
 			this.rbD3D9.Size = new System.Drawing.Size(73, 17);
-			this.rbD3D9.TabIndex = 19;
+			this.rbD3D9.TabIndex = 0;
 			this.rbD3D9.TabStop = true;
 			this.rbD3D9.Text = "Direct3D9";
 			this.rbD3D9.UseVisualStyleBackColor = true;
@@ -554,7 +541,7 @@
 			this.label7.Location = new System.Drawing.Point(21, 170);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(359, 47);
-			this.label7.TabIndex = 18;
+			this.label7.TabIndex = 5;
 			this.label7.Text = " • Slow; Mainly for compatibility purposes\r\n • Missing many features\r\n • Works be" +
     "tter over Remote Desktop, etc.\r\n";
 			// 
@@ -565,7 +552,7 @@
 			this.rbGDIPlus.Location = new System.Drawing.Point(6, 150);
 			this.rbGDIPlus.Name = "rbGDIPlus";
 			this.rbGDIPlus.Size = new System.Drawing.Size(50, 17);
-			this.rbGDIPlus.TabIndex = 17;
+			this.rbGDIPlus.TabIndex = 4;
 			this.rbGDIPlus.TabStop = true;
 			this.rbGDIPlus.Text = "GDI+";
 			this.rbGDIPlus.UseVisualStyleBackColor = true;
@@ -590,7 +577,7 @@
 			this.groupBox5.Location = new System.Drawing.Point(3, 3);
 			this.groupBox5.Name = "groupBox5";
 			this.groupBox5.Size = new System.Drawing.Size(371, 96);
-			this.groupBox5.TabIndex = 20;
+			this.groupBox5.TabIndex = 0;
 			this.groupBox5.TabStop = false;
 			this.groupBox5.Text = "Display Features (for speeding up replays)";
 			// 
@@ -647,7 +634,7 @@
 			this.cbAllowDoubleclickFullscreen.Location = new System.Drawing.Point(12, 223);
 			this.cbAllowDoubleclickFullscreen.Name = "cbAllowDoubleclickFullscreen";
 			this.cbAllowDoubleclickFullscreen.Size = new System.Drawing.Size(347, 17);
-			this.cbAllowDoubleclickFullscreen.TabIndex = 27;
+			this.cbAllowDoubleclickFullscreen.TabIndex = 2;
 			this.cbAllowDoubleclickFullscreen.Text = "Allow Double-Click Fullscreen (hold shift to force fullscreen to toggle)";
 			this.cbAllowDoubleclickFullscreen.UseVisualStyleBackColor = true;
 			// 
@@ -661,7 +648,7 @@
 			this.groupBox4.Location = new System.Drawing.Point(143, 6);
 			this.groupBox4.Name = "groupBox4";
 			this.groupBox4.Size = new System.Drawing.Size(266, 211);
-			this.groupBox4.TabIndex = 27;
+			this.groupBox4.TabIndex = 1;
 			this.groupBox4.TabStop = false;
 			this.groupBox4.Text = "Fullscreen";
 			// 
@@ -671,7 +658,7 @@
 			this.cbFSAutohideMouse.Location = new System.Drawing.Point(87, 19);
 			this.cbFSAutohideMouse.Name = "cbFSAutohideMouse";
 			this.cbFSAutohideMouse.Size = new System.Drawing.Size(141, 17);
-			this.cbFSAutohideMouse.TabIndex = 28;
+			this.cbFSAutohideMouse.TabIndex = 1;
 			this.cbFSAutohideMouse.Text = "Auto-Hide Mouse Cursor";
 			this.cbFSAutohideMouse.UseVisualStyleBackColor = true;
 			// 
@@ -680,7 +667,7 @@
 			this.label1.Location = new System.Drawing.Point(7, 88);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(240, 115);
-			this.label1.TabIndex = 27;
+			this.label1.TabIndex = 4;
 			this.label1.Text = resources.GetString("label1.Text");
 			// 
 			// cbFullscreenHacks
@@ -689,7 +676,7 @@
 			this.cbFullscreenHacks.Location = new System.Drawing.Point(6, 65);
 			this.cbFullscreenHacks.Name = "cbFullscreenHacks";
 			this.cbFullscreenHacks.Size = new System.Drawing.Size(191, 17);
-			this.cbFullscreenHacks.TabIndex = 26;
+			this.cbFullscreenHacks.TabIndex = 3;
 			this.cbFullscreenHacks.Text = "Enable Windows Fullscreen Hacks";
 			this.cbFullscreenHacks.UseVisualStyleBackColor = true;
 			// 
@@ -699,7 +686,7 @@
 			this.cbStatusBarFullscreen.Location = new System.Drawing.Point(6, 19);
 			this.cbStatusBarFullscreen.Name = "cbStatusBarFullscreen";
 			this.cbStatusBarFullscreen.Size = new System.Drawing.Size(75, 17);
-			this.cbStatusBarFullscreen.TabIndex = 23;
+			this.cbStatusBarFullscreen.TabIndex = 0;
 			this.cbStatusBarFullscreen.Text = "Status Bar";
 			this.cbStatusBarFullscreen.UseVisualStyleBackColor = true;
 			// 
@@ -709,7 +696,7 @@
 			this.cbMenuFullscreen.Location = new System.Drawing.Point(6, 42);
 			this.cbMenuFullscreen.Name = "cbMenuFullscreen";
 			this.cbMenuFullscreen.Size = new System.Drawing.Size(53, 17);
-			this.cbMenuFullscreen.TabIndex = 25;
+			this.cbMenuFullscreen.TabIndex = 2;
 			this.cbMenuFullscreen.Text = "Menu";
 			this.cbMenuFullscreen.UseVisualStyleBackColor = true;
 			// 
@@ -724,7 +711,7 @@
 			this.groupBox2.Location = new System.Drawing.Point(6, 6);
 			this.groupBox2.Name = "groupBox2";
 			this.groupBox2.Size = new System.Drawing.Size(131, 211);
-			this.groupBox2.TabIndex = 26;
+			this.groupBox2.TabIndex = 0;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Windowed";
 			// 
@@ -734,7 +721,7 @@
 			this.lblFrameTypeWindowed.Location = new System.Drawing.Point(51, 17);
 			this.lblFrameTypeWindowed.Name = "lblFrameTypeWindowed";
 			this.lblFrameTypeWindowed.Size = new System.Drawing.Size(62, 13);
-			this.lblFrameTypeWindowed.TabIndex = 26;
+			this.lblFrameTypeWindowed.TabIndex = 1;
 			this.lblFrameTypeWindowed.Text = "(frame type)";
 			// 
 			// cbStatusBarWindowed
@@ -743,7 +730,7 @@
 			this.cbStatusBarWindowed.Location = new System.Drawing.Point(9, 81);
 			this.cbStatusBarWindowed.Name = "cbStatusBarWindowed";
 			this.cbStatusBarWindowed.Size = new System.Drawing.Size(75, 17);
-			this.cbStatusBarWindowed.TabIndex = 23;
+			this.cbStatusBarWindowed.TabIndex = 3;
 			this.cbStatusBarWindowed.Text = "Status Bar";
 			this.cbStatusBarWindowed.UseVisualStyleBackColor = true;
 			// 
@@ -753,7 +740,7 @@
 			this.label9.Location = new System.Drawing.Point(6, 17);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(39, 13);
-			this.label9.TabIndex = 22;
+			this.label9.TabIndex = 0;
 			this.label9.Text = "Frame:";
 			// 
 			// cbMenuWindowed
@@ -762,20 +749,9 @@
 			this.cbMenuWindowed.Location = new System.Drawing.Point(9, 127);
 			this.cbMenuWindowed.Name = "cbMenuWindowed";
 			this.cbMenuWindowed.Size = new System.Drawing.Size(53, 17);
-			this.cbMenuWindowed.TabIndex = 25;
+			this.cbMenuWindowed.TabIndex = 5;
 			this.cbMenuWindowed.Text = "Menu";
 			this.cbMenuWindowed.UseVisualStyleBackColor = true;
-			// 
-			// trackbarFrameSizeWindowed
-			// 
-			this.trackbarFrameSizeWindowed.LargeChange = 1;
-			this.trackbarFrameSizeWindowed.Location = new System.Drawing.Point(6, 33);
-			this.trackbarFrameSizeWindowed.Maximum = 2;
-			this.trackbarFrameSizeWindowed.Name = "trackbarFrameSizeWindowed";
-			this.trackbarFrameSizeWindowed.Size = new System.Drawing.Size(99, 42);
-			this.trackbarFrameSizeWindowed.TabIndex = 21;
-			this.trackbarFrameSizeWindowed.Value = 1;
-			this.trackbarFrameSizeWindowed.ValueChanged += new System.EventHandler(this.trackbarFrameSizeWindowed_ValueChanged);
 			// 
 			// cbCaptionWindowed
 			// 
@@ -783,7 +759,7 @@
 			this.cbCaptionWindowed.Location = new System.Drawing.Point(9, 104);
 			this.cbCaptionWindowed.Name = "cbCaptionWindowed";
 			this.cbCaptionWindowed.Size = new System.Drawing.Size(62, 17);
-			this.cbCaptionWindowed.TabIndex = 24;
+			this.cbCaptionWindowed.TabIndex = 4;
 			this.cbCaptionWindowed.Text = "Caption";
 			this.cbCaptionWindowed.UseVisualStyleBackColor = true;
 			// 
@@ -793,10 +769,34 @@
 			this.linkLabel1.Location = new System.Drawing.Point(12, 404);
 			this.linkLabel1.Name = "linkLabel1";
 			this.linkLabel1.Size = new System.Drawing.Size(79, 13);
-			this.linkLabel1.TabIndex = 18;
+			this.linkLabel1.TabIndex = 3;
 			this.linkLabel1.TabStop = true;
 			this.linkLabel1.Text = "Documentation";
 			this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+			// 
+			// tbScanlineIntensity
+			// 
+			this.tbScanlineIntensity.LargeChange = 32;
+			this.tbScanlineIntensity.Location = new System.Drawing.Point(83, 55);
+			this.tbScanlineIntensity.Maximum = 256;
+			this.tbScanlineIntensity.Name = "tbScanlineIntensity";
+			this.tbScanlineIntensity.Size = new System.Drawing.Size(70, 45);
+			this.tbScanlineIntensity.TabIndex = 5;
+			this.tbScanlineIntensity.TickFrequency = 32;
+			this.tbScanlineIntensity.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+			this.tbScanlineIntensity.Scroll += new System.EventHandler(this.tbScanlineIntensity_Scroll);
+			this.tbScanlineIntensity.ValueChanged += new System.EventHandler(this.tbScanlineIntensity_Scroll);
+			// 
+			// trackbarFrameSizeWindowed
+			// 
+			this.trackbarFrameSizeWindowed.LargeChange = 1;
+			this.trackbarFrameSizeWindowed.Location = new System.Drawing.Point(6, 33);
+			this.trackbarFrameSizeWindowed.Maximum = 2;
+			this.trackbarFrameSizeWindowed.Name = "trackbarFrameSizeWindowed";
+			this.trackbarFrameSizeWindowed.Size = new System.Drawing.Size(99, 45);
+			this.trackbarFrameSizeWindowed.TabIndex = 2;
+			this.trackbarFrameSizeWindowed.Value = 1;
+			this.trackbarFrameSizeWindowed.ValueChanged += new System.EventHandler(this.trackbarFrameSizeWindowed_ValueChanged);
 			// 
 			// DisplayConfigLite
 			// 
@@ -815,7 +815,6 @@
 			this.Text = "Display Configuration";
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.tbScanlineIntensity)).EndInit();
 			this.grpFinalFilter.ResumeLayout(false);
 			this.grpFinalFilter.PerformLayout();
 			this.grpARSelection.ResumeLayout(false);
@@ -837,6 +836,7 @@
 			this.groupBox4.PerformLayout();
 			this.groupBox2.ResumeLayout(false);
 			this.groupBox2.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.tbScanlineIntensity)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.trackbarFrameSizeWindowed)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();

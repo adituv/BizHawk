@@ -41,9 +41,9 @@
 			this.BufferSizeNumeric = new System.Windows.Forms.NumericUpDown();
 			this.BufferSizeUnitsLabel = new System.Windows.Forms.Label();
 			this.grpOutputMethod = new System.Windows.Forms.GroupBox();
+			this.rbOutputMethodOpenAL = new System.Windows.Forms.RadioButton();
 			this.rbOutputMethodXAudio2 = new System.Windows.Forms.RadioButton();
 			this.rbOutputMethodDirectSound = new System.Windows.Forms.RadioButton();
-			this.rbOutputMethodOpenAL = new System.Windows.Forms.RadioButton();
 			this.SoundVolGroup.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.SoundVolBar)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.SoundVolNumeric)).BeginInit();
@@ -58,7 +58,7 @@
 			this.Cancel.Location = new System.Drawing.Point(317, 244);
 			this.Cancel.Name = "Cancel";
 			this.Cancel.Size = new System.Drawing.Size(75, 23);
-			this.Cancel.TabIndex = 1;
+			this.Cancel.TabIndex = 10;
 			this.Cancel.Text = "&Cancel";
 			this.Cancel.UseVisualStyleBackColor = true;
 			this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
@@ -69,7 +69,7 @@
 			this.OK.Location = new System.Drawing.Point(236, 244);
 			this.OK.Name = "OK";
 			this.OK.Size = new System.Drawing.Size(75, 23);
-			this.OK.TabIndex = 0;
+			this.OK.TabIndex = 9;
 			this.OK.Text = "&Ok";
 			this.OK.UseVisualStyleBackColor = true;
 			this.OK.Click += new System.EventHandler(this.OK_Click);
@@ -80,7 +80,7 @@
 			this.SoundOnCheckBox.Location = new System.Drawing.Point(108, 31);
 			this.SoundOnCheckBox.Name = "SoundOnCheckBox";
 			this.SoundOnCheckBox.Size = new System.Drawing.Size(74, 17);
-			this.SoundOnCheckBox.TabIndex = 3;
+			this.SoundOnCheckBox.TabIndex = 1;
 			this.SoundOnCheckBox.Text = "Sound On";
 			this.SoundOnCheckBox.UseVisualStyleBackColor = true;
 			this.SoundOnCheckBox.CheckedChanged += new System.EventHandler(this.SoundOnCheckBox_CheckedChanged);
@@ -91,7 +91,7 @@
 			this.MuteFrameAdvance.Location = new System.Drawing.Point(108, 54);
 			this.MuteFrameAdvance.Name = "MuteFrameAdvance";
 			this.MuteFrameAdvance.Size = new System.Drawing.Size(128, 17);
-			this.MuteFrameAdvance.TabIndex = 4;
+			this.MuteFrameAdvance.TabIndex = 2;
 			this.MuteFrameAdvance.Text = "Mute Frame Advance";
 			this.MuteFrameAdvance.UseVisualStyleBackColor = true;
 			// 
@@ -102,7 +102,7 @@
 			this.SoundVolGroup.Location = new System.Drawing.Point(12, 12);
 			this.SoundVolGroup.Name = "SoundVolGroup";
 			this.SoundVolGroup.Size = new System.Drawing.Size(90, 219);
-			this.SoundVolGroup.TabIndex = 2;
+			this.SoundVolGroup.TabIndex = 0;
 			this.SoundVolGroup.TabStop = false;
 			this.SoundVolGroup.Text = "Volume";
 			// 
@@ -135,7 +135,7 @@
 			this.listBoxSoundDevices.Location = new System.Drawing.Point(108, 108);
 			this.listBoxSoundDevices.Name = "listBoxSoundDevices";
 			this.listBoxSoundDevices.Size = new System.Drawing.Size(284, 95);
-			this.listBoxSoundDevices.TabIndex = 7;
+			this.listBoxSoundDevices.TabIndex = 5;
 			// 
 			// SoundDeviceLabel
 			// 
@@ -143,7 +143,7 @@
 			this.SoundDeviceLabel.Location = new System.Drawing.Point(105, 92);
 			this.SoundDeviceLabel.Name = "SoundDeviceLabel";
 			this.SoundDeviceLabel.Size = new System.Drawing.Size(78, 13);
-			this.SoundDeviceLabel.TabIndex = 6;
+			this.SoundDeviceLabel.TabIndex = 4;
 			this.SoundDeviceLabel.Text = "Sound Device:";
 			// 
 			// BufferSizeLabel
@@ -153,7 +153,7 @@
 			this.BufferSizeLabel.Location = new System.Drawing.Point(105, 213);
 			this.BufferSizeLabel.Name = "BufferSizeLabel";
 			this.BufferSizeLabel.Size = new System.Drawing.Size(61, 13);
-			this.BufferSizeLabel.TabIndex = 8;
+			this.BufferSizeLabel.TabIndex = 6;
 			this.BufferSizeLabel.Text = "Buffer Size:";
 			// 
 			// BufferSizeNumeric
@@ -172,7 +172,7 @@
             0});
 			this.BufferSizeNumeric.Name = "BufferSizeNumeric";
 			this.BufferSizeNumeric.Size = new System.Drawing.Size(59, 20);
-			this.BufferSizeNumeric.TabIndex = 9;
+			this.BufferSizeNumeric.TabIndex = 7;
 			this.BufferSizeNumeric.Value = new decimal(new int[] {
             100,
             0,
@@ -186,7 +186,7 @@
 			this.BufferSizeUnitsLabel.Location = new System.Drawing.Point(237, 213);
 			this.BufferSizeUnitsLabel.Name = "BufferSizeUnitsLabel";
 			this.BufferSizeUnitsLabel.Size = new System.Drawing.Size(63, 13);
-			this.BufferSizeUnitsLabel.TabIndex = 10;
+			this.BufferSizeUnitsLabel.TabIndex = 8;
 			this.BufferSizeUnitsLabel.Text = "milliseconds";
 			// 
 			// grpOutputMethod
@@ -197,9 +197,21 @@
 			this.grpOutputMethod.Location = new System.Drawing.Point(292, 12);
 			this.grpOutputMethod.Name = "grpOutputMethod";
 			this.grpOutputMethod.Size = new System.Drawing.Size(100, 90);
-			this.grpOutputMethod.TabIndex = 5;
+			this.grpOutputMethod.TabIndex = 3;
 			this.grpOutputMethod.TabStop = false;
 			this.grpOutputMethod.Text = "Output Method";
+			// 
+			// rbOutputMethodOpenAL
+			// 
+			this.rbOutputMethodOpenAL.AutoSize = true;
+			this.rbOutputMethodOpenAL.Location = new System.Drawing.Point(6, 65);
+			this.rbOutputMethodOpenAL.Name = "rbOutputMethodOpenAL";
+			this.rbOutputMethodOpenAL.Size = new System.Drawing.Size(64, 17);
+			this.rbOutputMethodOpenAL.TabIndex = 2;
+			this.rbOutputMethodOpenAL.TabStop = true;
+			this.rbOutputMethodOpenAL.Text = "OpenAL";
+			this.rbOutputMethodOpenAL.UseVisualStyleBackColor = true;
+			this.rbOutputMethodOpenAL.CheckedChanged += new System.EventHandler(this.OutputMethodRadioButtons_CheckedChanged);
 			// 
 			// rbOutputMethodXAudio2
 			// 
@@ -224,18 +236,6 @@
 			this.rbOutputMethodDirectSound.Text = "DirectSound";
 			this.rbOutputMethodDirectSound.UseVisualStyleBackColor = true;
 			this.rbOutputMethodDirectSound.CheckedChanged += new System.EventHandler(this.OutputMethodRadioButtons_CheckedChanged);
-			// 
-			// rbOutputMethodOpenAL
-			// 
-			this.rbOutputMethodOpenAL.AutoSize = true;
-			this.rbOutputMethodOpenAL.Location = new System.Drawing.Point(6, 65);
-			this.rbOutputMethodOpenAL.Name = "rbOutputMethodOpenAL";
-			this.rbOutputMethodOpenAL.Size = new System.Drawing.Size(64, 17);
-			this.rbOutputMethodOpenAL.TabIndex = 2;
-			this.rbOutputMethodOpenAL.TabStop = true;
-			this.rbOutputMethodOpenAL.Text = "OpenAL";
-			this.rbOutputMethodOpenAL.UseVisualStyleBackColor = true;
-			this.rbOutputMethodOpenAL.CheckedChanged += new System.EventHandler(this.OutputMethodRadioButtons_CheckedChanged);
 			// 
 			// SoundConfig
 			// 
